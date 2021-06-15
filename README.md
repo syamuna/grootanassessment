@@ -1,19 +1,27 @@
 # grootanassessment
+To create API:
 
-Create a new folder
-
-Run : npm init-y
-
-npm install json-server casual --save-dev
-
-create index.js
-
-generate data for users
-
-create a /User endpoint
-
-Run: node index.js
-
-visit : localhost:3000/users
-
+ Create a new folder to start for this project.
+ 
+ Run npm init -y 
+ 
+ In order to create the mockserver we need 2 npm dependencies.
+ 
+ json-server and casual so we run npm install json-server casual --save-dev in our project.
+ 
+ Create a index.js 
+ 
+ Create a folder /users and create a index.js in it.
+ 
+ Create a /user endpoint-inorder to create users.
+ 
+ Run node index.js inside the root folder of the project.
+ 
+ TO RUN PROJECT:
+ 
+ Visit localhost:3000/users 
+ 
+ REFERENCE:
+ 
+ https://mrfrontend.org/2019/05/how-to-mock-an-API-with-random-data-from-NodeJS#create-a--user-endpoint
 
