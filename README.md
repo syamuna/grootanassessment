@@ -17,9 +17,12 @@ To create API:
  
  Run node index.js inside the root folder of the project.
  
- TO RUN PROJECT:
  
  Visit localhost:3000/users 
+ 
+ TO RUN PROJECT:
+ 
+ localhost:3000
  
  REFERENCE:
  
