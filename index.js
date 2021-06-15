@@ -1,26 +1,15 @@
-const casual = require('casual')
-
-module.exports = () => {
-    casual.define('user', function() {
-    return {
-    name: casual.first_name,
-    surname: casual.last_name,
-    address: casual.street,
-    phone: casual.phone,
-    email: casual.email,
-    postalCode: casual.zip,
-    city: casual.city,
-    number: casual.building_number,
-    id: casual.uuid,
+const jsonServer = require('json-server')
+const server = jsonServer.create()
+const middlewares = jsonServer.defaults()
+const port = process.env.PORT || 3000
+server.use(jsonServer.bodyParser)
+server.use(middlewares)
+server.listen(port, () => {
+console.log('JSON Server is running')
+})
+server.get('/users', (request, response) => {
+    if (request.method === 'GET') {
+    const users = require('./users/index')
+    response.status(200).jsonp(users())
     }
     })
-    const data = {
-    users: [],
-    }
-    // Create 5 users
-    for (let i = 0; i < 5; i++) {
-    data.users.push(casual.user)
-    }
-    return data
-    }
-    
